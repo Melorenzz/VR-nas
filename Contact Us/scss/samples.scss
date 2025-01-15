@@ -1,0 +1,12 @@
+%border-block{
+    border: 1px solid;
+border-image: linear-gradient(94.92deg, rgba(255, 255, 255, 0.3) -0.29%, rgba(255, 255, 255, 0) 100%) 1;
+
+
+}
+%gradient-color{
+    color: transparent;    
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-image: $gradient;
+}

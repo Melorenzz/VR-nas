@@ -1,0 +1,534 @@
+@import 'null.scss';
+@import 'samples.scss';
+@import 'fonts.scss';
+@import 'colors.scss';
+
+body {
+    background: $bg;
+    font-family: "Chakra Petch", serif;
+    color: white;
+}
+
+a {
+    color: white;
+}
+.burger {
+    display: none;
+    width: 50px;
+    height: 50px;
+    background: url('../../img/icons/burger.svg') center no-repeat;
+    background-size: cover;
+    position: relative;
+    
+    input[type="checkbox"] {
+      width: 100%;
+      height: 100%;
+      background: none;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      margin: 0;
+      border: none;
+      outline: none;
+    }
+  
+    /* Показываем элемент .ddd, когда чекбокс выбран */
+    input[type="checkbox"]:checked + .burger__checked {
+      display: block;
+    }
+  }
+  
+  .burger__checked {
+        top: 30px;
+    right: 40px;
+    position: absolute;
+    width: 100px;
+    height: 150px;
+    display: none;
+    .nav__burger{
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.205);
+        border: 1px solid rgba(255, 255, 255, 0.151);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+  }
+header {
+    max-height: 114px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 16px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        >a {
+            width: 126px;
+            height: 52px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid;
+            border-image: $gradient 1;
+
+        }
+
+        
+    }
+
+    nav {
+        display: flex;
+        gap: 65px;
+        a{
+            position: relative;
+            &:nth-child(3){
+                &::after{
+                    content: '';
+                width: 100%;
+                top: 25px;
+                height: 2px;
+                border-radius: 10px;
+                transform-origin: left;
+
+                background: white;
+                position: absolute;
+                display: flex;
+                }
+            }
+            &::after{
+                content: '';
+                transition: all .3s;
+                width: 0%;
+                top: 25px;
+                height: 2px;
+                border-radius: 10px;
+                transform-origin: left;
+
+                background: white;
+                position: absolute;
+                display: flex;
+                &:hover{
+                    width: 100%;
+                    
+                }
+            }
+            &:hover::after{
+                width: 100%;
+            }
+        }
+    }
+
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.title__subtitle {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    padding-bottom: 69px;
+    border-bottom: 1px solid;
+    border-image: $gradient 1;
+    position: relative;
+    > img{
+        position: absolute;
+        z-index: -1;
+    }
+    p {
+        margin-top: 28.5px;
+        font-weight: 600;
+    }
+
+    span {
+        font-weight: 300;
+        color: $gray;
+    }
+}
+
+h1 {
+    font-size: 64px;
+    font-weight: 600;
+}
+
+.team {
+    margin-top: 150px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    p {
+        max-width: 751px;
+        margin-top: 16px;
+    }
+}
+
+.team__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.gradient__title {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 14%;
+    background: $gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+}
+
+.second__title {
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.team__photos{
+    margin-top: 48px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+    
+}
+.photo{
+    max-width: 379px;
+    width: 100%;
+    height: 503px;
+    background: $bg-block;
+    border: 1px solid;
+    padding: 12px;
+    transition: all .5s;
+    border-image: linear-gradient(to right, rgba(255, 255, 255, 0.226), rgba(255, 255, 255, 0)) 1;
+    &:hover {
+        border-image: $gradient 1;
+        .image__socials{
+            bottom: 90px;
+        }
+    }
+    
+    
+    
+}
+._first__img{
+    background: url('../../img/photos/Group\ 1000003206\ \(4\).png') center no-repeat;
+    background-size: cover;
+}
+._second__img{
+    background: url('../../img/photos/Group\ 1000003207\ \(3\).png') center no-repeat;
+    background-size: cover;
+}
+._third__img{
+    background: url('../../img/photos/Group\ 1000003208\ \(1\).png') center no-repeat;
+    background-size: cover;
+}
+._fourth__img{
+    background: url('../../img/photos/Group\ 1000003209\ \(1\).png') center no-repeat;
+    background-size: cover;
+}
+._fifth__img{
+    background: url('../../img/photos/Group\ 1000003210\ \(1\).png') center no-repeat;
+    background-size: cover;
+}
+._sixth__img{
+    background: url('../../img/photos/Group\ 1000003211\ \(1\).png') center no-repeat;
+    background-size: cover;
+}
+.image{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+    .image__socials{
+        transition: all .3s ease;
+        left: 50%;
+        transform: translate(-50%, 0);
+        bottom: -90px;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+    }
+
+
+    .name__prof{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        bottom: 26px;
+        p{
+            font-size: 20px;
+            font-weight: 400;
+            &:last-child{
+                font-size: 14px;
+                color: #B0B0B2;
+            }
+        }
+    }
+}
+
+
+.reviews{
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    flex-wrap: wrap;
+    position: relative;
+    > img{
+        position: absolute;
+        top: -30px;
+        width: 100%;
+        z-index: -1;
+    }
+}
+.reviews__quantity{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    p{
+        
+        &:last-child{
+            font-size: 48px;
+            font-weight: 600;
+        }
+    }
+}
+
+
+.subscribe {
+    background: $gradient;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 167px;
+    width: 100%;
+    height: 185px;
+    margin-top: 150px;
+
+    h3 {
+        font-size: 40px;
+        font-weight: 600;
+        max-width: 540px;
+    }
+
+    form {
+        max-width: 365px;
+        height: 56px;
+        background: rgba(255, 255, 255, 0.07);
+        display: flex;
+        align-items: center;
+
+        >img {
+            margin-left: 14px;
+        }
+
+        input {
+            width: 274px;
+            height: 100%;
+            background: none;
+            margin-left: 8px;
+            padding-right: 13px;
+        }
+
+        button {
+            width: 55px;
+            height: 49.33px;
+            background: rgba(255, 255, 255, 0.21);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+footer {
+    margin-top: 64px;
+}
+
+.logoSocial {
+    >img {
+        width: 101px;
+        height: 30px;
+    }
+
+    display: flex;
+    flex-direction: column;
+    gap: 139px;
+
+    .social {
+        display: flex;
+        gap: 20px;
+        max-width: 244px;
+        height: 46px;
+    }
+}
+
+.topFooter {
+    margin-top: 182px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerNav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 149px;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        font-weight: 300;
+
+        span {
+            font-weight: 600;
+        }
+    }
+
+}
+
+.bottomFooter {
+    display: flex;
+    justify-content: center;
+    padding-top: 32px;
+    margin-top: 65px;
+    position: relative;
+
+    &:before {
+        content: '';
+        width: 100%;
+        height: 1px;
+        background: $gradient;
+        position: absolute;
+        top: 0;
+    }
+}
+
+@media (max-width: 1033px) {
+    .why__us{
+        align-items: center;
+        > img{
+            display: none;
+        }
+    }
+    .topFooter {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logoSocial {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footerNav {
+        margin-top: 100px;
+    }
+
+    .subscribe {
+        flex-direction: column;
+        gap: 0;
+        text-align: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 848px) {
+    .reviews{
+        gap: 100px;
+        
+    }
+}
+
+@media (max-width: 813px) {
+    .logoSocial{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .footerNav{
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 713px) {
+    header{
+        nav{
+            display: none;
+        }
+        .container{
+            > a{
+                display: none;
+            }
+        }
+    }
+    .reviews{
+        display: none;
+        
+        > img{
+            display: none;
+        }
+    }
+    .title__subtitle {
+        
+        > img{
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+        }
+    }
+    .subscribe{
+        h3 {
+            font-size: 30px;
+            
+        }
+    }
+    .burger{
+        display: block;
+    }
+}
+@media (max-width: 429px) {
+    h1{
+        font-size: 55px;
+    }
+    .subscribe{
+        h3 {
+            font-size: 20px;
+            
+        }
+        form{
+            max-width: 300px;
+            button {
+                width: 65px;
+                height: 49.33px;
+                
+            }
+        }
+    }
+}
